@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { loadUser } from '../user';
 import { httpGet } from '../http';
 

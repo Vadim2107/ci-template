@@ -1,33 +1,37 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-undef */
-import toMeasureHealth from '../app';
+import { toMeasureHealth, players } from '../app';
 
-test('state of health', () => {
+test('checks the health status of players', () => {
   const result = toMeasureHealth({ name, health: 70 });
 
   expect(result).toBe('healthy');
 });
 
-test('state of health', () => {
+test('checks the health status of players', () => {
   const result = toMeasureHealth({ name, health: 50 });
 
   expect(result).toBe('healthy');
 });
 
-test('state of health', () => {
+test('checks the health status of players', () => {
   const result = toMeasureHealth({ name, health: 30 });
 
   expect(result).toBe('wounded');
 });
 
-test('state of health', () => {
+test('checks the health status of players', () => {
   const result = toMeasureHealth({ name, health: 15 });
 
   expect(result).toBe('wounded');
 });
 
-test('state of health', () => {
+test('checks the health status of players', () => {
   const result = toMeasureHealth({ name, health: 10 });
 
   expect(result).toBe('critical');
+});
+
+test('need to sort players by health level', () => {
+
 });

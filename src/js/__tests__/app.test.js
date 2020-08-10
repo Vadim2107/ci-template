@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-undef */
-// import { toMeasureHealth, players } from '../app';
-import { toMeasureHealth } from '../app';
+import { toMeasureHealth, sortPlayers } from '../app';
+// import { toMeasureHealth } from '../app';
 
 test('checks the health status of players', () => {
   const result = toMeasureHealth({ name, health: 70 });
@@ -33,6 +33,11 @@ test('checks the health status of players', () => {
   expect(result).toBe('critical');
 });
 
-// test('need to sort players by health level', () => {
-//   const input = players;
-// });
+test('need to sort players by health level', () => {
+  const sorted = [
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'мечник', health: 10 },
+  ];
+  expect(sortPlayers).toEqual(sorted);
+});

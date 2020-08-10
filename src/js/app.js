@@ -29,5 +29,5 @@ function toMeasureHealth(obj) {
   return life;
 }
 
-players.sort((a, b) => b.health - a.health);
-export { players, toMeasureHealth };
+const sortPlayers = players.sort((a, b) => b.health - a.health);
+export { sortPlayers, toMeasureHealth };
